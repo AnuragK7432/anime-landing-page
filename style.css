@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Sofia+Sans&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+header .toggle ul {
+  display: flex;
+  list-style: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+header .toggle li {
+  margin-right: 30px;
+  font-size: 1.5rem;
+}
+
+header .logo {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header .logo span {
+  color: #37d72f;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0px 100px;
+  background-color: #111;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container:before {
+  content: " ";
+  height: 100vh;
+  width: 500px;
+  background-color: #37d72f;
+  position: absolute;
+  right: 0px;
+  transform-origin: top;
+  transform: skew(-25deg);
+}
+
+.container .textbox {
+  position: relative;
+  width: 60%;
+  z-index: 2;
+}
+
+.container .textbox h2 {
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.container .textbox p {
+  font-size: 1.5em;
+  max-width: 1000px;
+  color: #fff;
+  margin: 5px 0px 25px;
+}
+
+.container .textbox a {
+  background-color: #fff;
+  text-decoration: none;
+  color: #111;
+  padding: 15px 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.container .imgbox {
+  position: relative;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.container .imgbox img {
+  position: absolute;
+  height: 90%;
+  bottom: 0;
+  z-index: 111;
+  overflow: hidden;
+}
+
+.social-media {
+  position: absolute;
+  list-style: none;
+  bottom: 20px;
+  display: flex;
+  letter-spacing: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-media li img {
+  transform: scale(0.5);
+  filter: invert(1);
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px 50px;
+  }
+
+  .container {
+    padding: 150px 50px 0px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .container:before {
+    width: 300px;
+    transform: skewX(-25deg) translateX(50%);
+    z-index: 1;
+  }
+
+  .container .textbox {
+    max-width: 100%;
+  }
+
+  .social-media {
+    z-index: 1000;
+    left: initial;
+    right: 20px;
+    flex-direction: column;
+  }
+}
